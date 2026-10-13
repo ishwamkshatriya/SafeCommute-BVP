@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+<title id="title">SafeCommute mark</title>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b7fb7d"/><stop offset="1" stop-color="#7bdc55"/></linearGradient></defs>
+<path d="M64 8c-23 0-42 18-42 41 0 31 42 70 42 70s42-39 42-70C106 26 87 8 64 8Z" fill="url(#g)"/>
+<path d="M64 21c-16 0-29 13-29 29 0 19 20 39 29 48 9-9 29-29 29-48 0-16-13-29-29-29Z" fill="#122039"/>
+<circle cx="53" cy="47" r="8" fill="#f7fbff"/><circle cx="75" cy="47" r="8" fill="#f7fbff"/>
+<path d="M39 70c1-9 7-14 14-14s13 5 14 14" fill="none" stroke="#f7fbff" stroke-width="7" stroke-linecap="round"/>
+<path d="M61 70c1-9 7-14 14-14s13 5 14 14" fill="none" stroke="#a5f06d" stroke-width="7" stroke-linecap="round"/>
+<path d="M49 83h30" stroke="#a5f06d" stroke-width="4" stroke-linecap="round"/>
+</svg>

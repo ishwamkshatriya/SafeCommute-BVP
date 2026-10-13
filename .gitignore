@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Local database and student data
+server/data/db.json
+server/data/students-roster.csv
+
+# Build output
+client/dist/
+dist/
+
+# Logs
+*.log
+npm-debug.log*
