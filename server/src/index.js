@@ -84,7 +84,13 @@ app.post("/api/admin/import-roster",auth,admin,async(req,res)=>{
     for(let i=0;i<line.length;i++){const c=line[i];if(c==='"'&&line[i+1]==='"'&&quoted){value+='"';i++;}else if(c==='"'){quoted=!quoted;}else if(c===","&&!quoted){out.push(value.trim());value="";}else value+=c;}
     out.push(value.trim());return out;
   };
-  const headers=parseLine(lines.shift()).map(x=>x.toLowerCase().replace(/[ _-]/g,""));
+  const headers = parseLine(
+  lines.shift()
+    .replace(/\\n/g, "")
+    .replace(/\\r/g, "")
+    .replace(/^\uFEFF/, "")
+    .trim()
+).map(x => x.toLowerCase().replace(/[ _-]/g, ""));
   const find=(...names)=>headers.findIndex(h=>names.includes(h));
   const pi=find("prn","studentid","rollno","loginid"),ni=find("name","fullname","studentname"),si=find("surname","lastname","familyname"),bi=find("branch","department"),mi=find("semester","sem");
   if([pi,ni,si,bi,mi].some(i=>i<0)) return res.status(400).json({error:"CSV needs columns: PRN, Name, Surname, Branch, Semester"});
